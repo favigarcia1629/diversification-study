@@ -29,6 +29,12 @@ COLORS = {
     "S&P 500 (SPY Benchmark)":      "#9E9E9E",
 }
 
+FILL_COLORS = {
+    "Magnificent 7 (Concentrated)": "rgba(255,107,53,0.2)",
+    "Diversified (11 Sectors)":     "rgba(33,150,243,0.2)",
+    "S&P 500 (SPY Benchmark)":      "rgba(158,158,158,0.2)",
+}
+
 # ── Header ───────────────────────────────────────────────────────────────────
 st.markdown("""
 <h1 style='text-align:center; color:#FFFFFF; margin-bottom:4px'>
@@ -146,7 +152,7 @@ with tab2:
             x=dd.index, y=dd.values,
             name=name, fill="tozeroy",
             line=dict(color=COLORS[name], width=1.8),
-            fillcolor=COLORS[name] + "55",
+            fillcolor=FILL_COLORS[name],
             hovertemplate="%{y:.1f}%<extra>" + name + "</extra>",
         ))
     fig.update_layout(
