@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.DS_Store
+data/prices.parquet
+exports/
+*.egg-info/
+.env
+venv/
+.venv/
