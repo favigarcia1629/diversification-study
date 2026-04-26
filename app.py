@@ -144,7 +144,7 @@ with tab2:
             x=dd.index, y=dd.values,
             name=name, fill="tozeroy",
             line=dict(color=COLORS[name], width=1.8),
-            fillcolor=COLORS[name].replace(")", ",0.2)").replace("rgb", "rgba") if "rgb" in COLORS[name] else COLORS[name] + "33",
+            fillcolor=COLORS[name] + "55",
             hovertemplate="%{y:.1f}%<extra>" + name + "</extra>",
         ))
     fig.update_layout(
