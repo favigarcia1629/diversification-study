@@ -1,6 +1,7 @@
 import yfinance as yf
 import pandas as pd
 from pathlib import Path
+from datetime import date
 
 # --- Portfolio Definitions ---
 MAG7 = {
@@ -30,7 +31,7 @@ DIVERSIFIED = {
 BENCHMARK = "SPY"
 
 START_DATE = "2019-01-01"
-END_DATE   = "2025-04-25"
+END_DATE   = date.today().isoformat()
 
 CACHE_PATH = Path(__file__).parent / "prices.parquet"
 

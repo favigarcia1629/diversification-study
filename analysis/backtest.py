@@ -1,6 +1,10 @@
 import pandas as pd
+from datetime import date
 from data.fetch import fetch_prices, get_returns, MAG7, DIVERSIFIED, BENCHMARK
 from analysis.metrics import portfolio_returns, cumulative_returns, period_returns
+
+TODAY = date.today().isoformat()
+CURRENT_YEAR = date.today().year
 
 # Market regimes to analyze
 REGIMES = {
@@ -9,8 +13,8 @@ REGIMES = {
     "COVID Recovery (2020-2021)":  ("2020-03-23", "2021-12-31"),
     "Rate Hike Bear (2022)":       ("2022-01-01", "2022-12-31"),
     "AI Boom (2023-2024)":         ("2023-01-01", "2024-12-31"),
-    "2025 YTD":                    ("2025-01-01", "2025-04-25"),
-    "Full Period (2019-2025)":     ("2019-01-01", "2025-04-25"),
+    f"{CURRENT_YEAR} YTD":             (f"{CURRENT_YEAR}-01-01", TODAY),
+    f"Full Period (2019-{CURRENT_YEAR})": ("2019-01-01", TODAY),
 }
 
 

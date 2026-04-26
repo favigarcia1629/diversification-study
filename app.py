@@ -58,10 +58,12 @@ with st.sidebar:
     st.markdown("🔵 **Diversified** — 11 sectors, 1 stock each")
     st.markdown("⚫ **Benchmark** — SPY (S&P 500 ETF)")
     st.markdown("---")
-    st.caption("Data via yfinance · 2019–2025")
+    from datetime import date
+    st.caption(f"Data via yfinance · 2019–{date.today().year}")
 
 # ── KPI Row ───────────────────────────────────────────────────────────────────
-st.subheader("Full Period Snapshot (Jan 2019 – Apr 2025)")
+from datetime import date as _date
+st.subheader(f"Full Period Snapshot (Jan 2019 – {_date.today().strftime('%b %Y')})")
 cols = st.columns(3)
 for col, (name, ret) in zip(cols, strategies.items()):
     with col:
@@ -254,7 +256,7 @@ with tab5:
         color_continuous_midpoint=0,
         text_auto=".2f",
         aspect="auto",
-        title="★ = Mag7 stocks | Correlation matrix (daily returns, 2019–2025)",
+        title=f"★ = Mag7 stocks | Correlation matrix (daily returns, 2019–{_date.today().year})",
         zmin=-1, zmax=1,
     )
     fig.update_layout(template="plotly_dark", height=600)
