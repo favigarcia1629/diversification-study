@@ -4,7 +4,7 @@
 
 This project compares two investment philosophies head-to-head from January 2019 to today, across every major market regime — COVID crash, rate hike bear market, AI boom, and 2025–2026 volatility.
 
-🔗 **[Live Interactive Dashboard](https://favigarcia1629-diversification-study-app.streamlit.app)**
+🔗 **[Live Interactive Dashboard](https://diversification-study-j9xnldxxkbfqcrvpveu8p7.streamlit.app)**
 
 ---
 
